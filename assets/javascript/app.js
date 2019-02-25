@@ -3,6 +3,8 @@ var timerMinutes = 4;
 var timerSeconds = 59;
 var timeLeft = null;
 timerId = null;
+var correctAnswers = 0;
+var incorrectAnswers = 0;
 
 function setup(){
 
@@ -15,22 +17,26 @@ function setup(){
 function handleTimer(){
     timerSeconds--;
     $("#timer-seconds").html(timerSeconds);
-    console.log("tick");
+    //console.log("tick");
 
 
     if(timerSeconds == -1){
 
         timerMinutes--;
         timerSeconds = 59;
-        console.log("minus a minute");
+        //console.log("minus a minute");
         $("#timer-seconds").html("59");
         $("#timer-minutes").html(timerMinutes);
     };
 
     if(timerMinutes == 0){
-        console.log("YOU LOSE!");
-        alert("Time is up! Game Over!");
+        console.log("Time's up!");
+        alert("Time is up!");
     }
+
+};
+
+function showResults(){
 
 };
 
