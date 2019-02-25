@@ -1,12 +1,10 @@
 
-var timerMinutes = null;
-var timerSeconds = null;
+var timerMinutes = 4;
+var timerSeconds = 59;
 var timeLeft = null;
-timerId =  null;
+timerId = null;
 
 function setup(){
-    var timerMinutes = 9;
-    var timerSeconds = 59;
 
     timerId = setInterval("handleTimer();", 1000);
 
@@ -15,18 +13,23 @@ function setup(){
 };
 
 function handleTimer(){
-    timerSeconds--
+    timerSeconds--;
     $("#timer-seconds").html(timerSeconds);
     console.log("tick");
 
-    if(timerSeconds == 0){
-        var timerSeconds=59;
+
+    if(timerSeconds == -1){
+
         timerMinutes--;
+        timerSeconds = 59;
         console.log("minus a minute");
-    }
+        $("#timer-seconds").html("59");
+        $("#timer-minutes").html(timerMinutes);
+    };
+
     if(timerMinutes == 0){
         console.log("YOU LOSE!");
-        alert("Time is up!");
+        alert("Time is up! Game Over!");
     }
 
 };
