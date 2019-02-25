@@ -29,5 +29,6 @@
     background: pink;
     min-width: 90px;
     min-height: 30px;
-    font-size: 2em;
+    font-size: 1.4em;
+    text-align: center;
 }
