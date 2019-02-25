@@ -1,0 +1,33 @@
+
+
+.total-quiz{
+    border: solid 1px green;
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 40px;
+    width: 80%;
+}
+.quiz-header{
+    font-size: 2em;
+    background: lightcyan;
+    text-align: center;
+    border-bottom: black 1px solid;
+    border-radius: 20px 20px 0 0;
+    }
+
+.question{
+    margin: 5px 20px 5px 20px;
+    }
+.question-header{
+    font-size: 2em;
+    }
+
+.timer{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    background: pink;
+    min-width: 90px;
+    min-height: 30px;
+    font-size: 2em;
+}
