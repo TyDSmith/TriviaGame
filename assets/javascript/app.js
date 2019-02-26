@@ -27,8 +27,30 @@ var myQuestions = [
             d: '8 years'
         },
         correctAnswer: 'b'
+    },
+    {
+        question: "How many pounds of meat does an adult Mountain Lion require each day?",
+        answers: {
+            a: '5 lbs.',
+            b: '7 lbs.',
+            c: '9 lbs.',
+            d: '15 lbs.'
+        },
+        correctAnswer: 'c'
+    },
+    {
+        question: "Are Mountain Lions Dangerous?",
+        answers: {
+            a: 'No',
+            b: 'A little bit',
+            c: 'Yeah...kinda',
+            d: 'HELL YEAH'
+        },
+        correctAnswer: 'd'
     }
 ];
+
+
 
 
 
