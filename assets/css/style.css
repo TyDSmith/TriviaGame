@@ -16,9 +16,9 @@
     border-radius: 20px 20px 0 0;
     }
 
-    .question-section{
-        margin: 20px 0px;
-        }
+.question-section{
+    margin: 20px 0px;
+    }
 
 .question-text{
     font-size: 0.8em;
@@ -32,13 +32,13 @@
     }
 
 .answer-choice{
-        font-size: 1.2em;
-        text-align: center;
-        background: lightgreen;
-        border-radius: 40px;
-        line-height: 1.8em;
-        margin-bottom: 3px;
-        }
+    font-size: 1.2em;
+    text-align: center;
+    background: lightgreen;
+    border-radius: 40px;
+    line-height: 1.8em;
+    margin-bottom: 3px;
+    }
 
 .submit-button{
     border-top: 1px solid black;
