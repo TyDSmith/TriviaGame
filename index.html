@@ -7,106 +7,22 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="./assets/javascript/app.js"></script>
 <body onload="setup();">
-    <div class="total-quiz">
-        <div class="quiz-header">
-            Mountain Lion Trivia
-        </div>
-        <div class="question-section">
-            <div class="question">
-                <div class="question-header correct">
-                    Question #1:
-                    <br> 
-                    <span class="question-text">What is the top speed of a Mountain Lion?</span>
-                </div>
-                <div class="answers">
-                    <div class="answer-choice correct">
-                            50 MPH
-                    </div>
-                    <div class="answer-choice">
-                            40 MPH
-                    </div>
-                    <div class="answer-choice">
-                            30 MPH
-                    </div>
-                    <div class="answer-choice">
-                            25 MPH
-                    </div>
+
+        <div class="total-quiz">
+                
+                <div class="quiz-header">
+                Mountain Lion Trivia
                 </div>
 
-            </div>
-            <div class="question">
-                <div class="question-header">
-                    Question #2:
-                    <br> 
-                    <span class="question-text">What is the average lifespan of a Mountain Lion in the wild?</span>
+                <div id="startDiv"></div>
+                <div id="questionsDiv"></div>
+                <div id="submit-button">
                 </div>
-                <div class="answers">
-                        <div class="answer-choice">
-                                15 years
-                        </div>
-                        <div class="answer-choice correct">
-                                12 years
-                        </div>
-                        <div class="answer-choice">
-                                23 years
-                        </div>
-                        <div class="answer-choice">
-                                8 years
-                        </div>
-                    </div>
-            </div>
-            <div class="question">
-                <div class="question-header">
-                    Question #3:
-                    <br> 
-                    <span class="question-text">How many pounds of meat does an adult Mountain Lion require each day?</span>
-                </div>
-                <div class="answers">
-                        <div class="answer-choice">
-                                5 lbs.
-                        </div>
-                        <div class="answer-choice">
-                                7 lbs.
-                        </div>
-                        <div class="answer-choice correct">
-                                9 lbs.
-                        </div>
-                        <div class="answer-choice">
-                                15 lbs.
-                        </div>
-                    </div>
-            </div>
-            <div class="question">
-                <div class="question-header">
-                    Question #4: 
-                    <br> 
-                    <span class="question-text">Are Mountain Lions Dangerous?</span>
-                </div>  
-                <div class="answers">
-                        <div class="answer-choice">
-                                No
-                        </div>
-                        <div class="answer-choice">
-                                A tiny bit
-                        </div>
-                        <div class="answer-choice">
-                               Yeah kinda
-                        </div>
-                        <div class="answer-choice correct">
-                                HELL YEAH!
-                        </div>
-                    </div>
-            </div>
-            
-        </div>
-        <div class="submit-button">
-            <button type="submit" onclick="showResults();">Submit Quiz</button>
-        </div>
-        <div class="timer">
-            <span id="timer-minutes"></span>:<span id="timer-seconds"></span>
+                <div class="timer">
+                <span id="timer-minutes"></span>:<span id="timer-seconds"></span>
 
 
+                </div>
         </div>
-    </div>
 </body>
 </html>

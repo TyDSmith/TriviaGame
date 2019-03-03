@@ -8,10 +8,10 @@ var incorrectAnswers = 0;
 
 let qNumber = 0;
 let question = "";
-let answer1 = "";
-let answer2 = "";
-let answer3 = "";
-let answer4 = "";
+let answerA = "";
+let answerB = "";
+let answerC = "";
+let answerD = "";
 
 
 var myQuestions = [
@@ -62,17 +62,43 @@ var myQuestions = [
 ];
 
 
-
 function setup(){
-
     timerId = setInterval("handleTimer();", 1000);
+    showStart;
     $("#timer-minutes").html(timerMinutes);
     $("#timer-seconds").html(timerSeconds);
+    showStart();
 };
+
+//display start button
+function showStart(){
+    $("#startDiv").html("<button onclick=showQuestions(); onclick=hideStart();>Start Quiz</button> ");
+};
+
+function hideStart(){
+    $("#startDiv").hide();
+};
+
 
 //dislay questions
 function showQuestions(){
+    console.log("start button clicked");
+    hideStart();
+    //forloop to output each questions
+    for (i=0; i<myQuestions.length;i++){
+        var answerA = "<div class=answer-choice>" + myQuestions[i].answers.a + "</div><br>";
+        var answerB = "<div class=answer-choice>" + myQuestions[i].answers.b + "</div><br>";
+        var answerC = "<div class=answer-choice>" + myQuestions[i].answers.c + "</div><br>";
+        var answerD = "<div class=answer-choice>" + myQuestions[i].answers.d + "</div><br>";
+        var question = "<div class='question-text'>" + myQuestions[i].question + "</div>"
+        $("#questionsDiv").append("<div class='question-header'>" + myQuestions[i].qHead + question + answerA + answerB + answerC + answerD);
+       console.log(myQuestions[i].qHead); 
 
+    };
+};
+
+function showSubmitBtn(){
+    $("#submit-button").html("<button type='submit' onclick='showResults();'>Submit Quiz</button>");
 };
 
 //create eventlistener to watch clicks
@@ -83,6 +109,7 @@ function checkAnswer(e){
     let clickedDiv = e.currentTarget;
     if (clickedDiv.innerText === myQuestions[qNumber].correctAnswer){
         correctAnsCount++;
+        $(clickedDiv).css("background-color:green;");
     }
 };
 
@@ -105,6 +132,10 @@ function handleTimer(){
         //console.log("minus a minute");
         $("#timer-seconds").html("59");
         $("#timer-minutes").html(timerMinutes);
+    };
+    if(timerSeconds <= 9){
+        //console.log("minus a minute");
+        $("#timer-seconds").html("0"+timerSeconds);
     };
 
     if(timerMinutes == 0 && timerSeconds == 0){

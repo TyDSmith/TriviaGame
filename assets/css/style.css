@@ -8,6 +8,14 @@
     width: 80%;
 }
 
+#startDiv button{
+    font-size: 2em;
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    margin:50px 0;
+}
+
 .quiz-header{
     font-size: 2em;
     background: lightcyan;
