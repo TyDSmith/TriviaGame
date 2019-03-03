@@ -12,6 +12,7 @@ let answerA = "";
 let answerB = "";
 let answerC = "";
 let answerD = "";
+let e ="";
 
 
 var myQuestions = [
@@ -75,6 +76,7 @@ function showStart(){
     $("#startDiv").html("<button onclick=showQuestions(); onclick=hideStart();>Start Quiz</button> ");
 };
 
+//hide start button
 function hideStart(){
     $("#startDiv").hide();
 };
@@ -82,17 +84,19 @@ function hideStart(){
 
 //dislay questions
 function showQuestions(){
-    console.log("start button clicked");
+    //console.log("start button clicked");
     hideStart();
+    $(".answer-choice").click(checkAnswer);
     //forloop to output each questions
     for (i=0; i<myQuestions.length;i++){
-        var answerA = "<div class=answer-choice>" + myQuestions[i].answers.a + "</div><br>";
-        var answerB = "<div class=answer-choice>" + myQuestions[i].answers.b + "</div><br>";
-        var answerC = "<div class=answer-choice>" + myQuestions[i].answers.c + "</div><br>";
-        var answerD = "<div class=answer-choice>" + myQuestions[i].answers.d + "</div><br>";
+        var answerA = "<button class=answer-choice onclick=checkAnswer(event);>" + myQuestions[i].answers.a + "</button><br>";
+        var answerB = "<button class=answer-choice onclick=checkAnswer(event);>" + myQuestions[i].answers.b + "</button><br>";
+        var answerC = "<button value=c class=answer-choice onclick=checkAnswer(event);>" + myQuestions[i].answers.c + "</button><br>";
+        var answerD = "<div class=answer-choice value=d onclick=checkAnswer(event);>" + myQuestions[i].answers.d + "</div><br>";
         var question = "<div class='question-text'>" + myQuestions[i].question + "</div>"
+        
         $("#questionsDiv").append("<div class='question-header'>" + myQuestions[i].qHead + question + answerA + answerB + answerC + answerD);
-       console.log(myQuestions[i].qHead); 
+       //console.log(myQuestions[i].qHead); 
 
     };
 };
@@ -102,14 +106,27 @@ function showSubmitBtn(){
 };
 
 //create eventlistener to watch clicks
-
+$(".answer-choice").click(
+   
+);
 
 //see if clicked answer is correct
-function checkAnswer(e){
-    let clickedDiv = e.currentTarget;
-    if (clickedDiv.innerText === myQuestions[qNumber].correctAnswer){
+
+function checkAnswer(event){
+    //PSUEDOCODE: Somehow make it so clicking on one asnwer clears the selection of any other answers on that same question
+
+    let clickedDiv = event.currentTarget;
+    //console.log(clickedDiv);
+    //PSUEDOCODE: get the answer checker working 
+    if (clickedDiv == myQuestions[qNumber].correctAnswer
+        ){
         correctAnsCount++;
-        $(clickedDiv).css("background-color:green;");
+        //console.log('correct count increased');
+        $(clickedDiv).css('background-color','green');
+    } else{
+        $(clickedDiv).css('background-color','red');
+        //console.log('incorrect');
+
     }
 };
 

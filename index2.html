@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style2.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./assets/javascript/app2.js"></script>
+</head>
+<body onLoad="setup();">
+    <h1>Mountain Lion Trivia</h1>
+    <h2>Unleash the beast</h1>  
+    <div id="startScreen">
+      <button type="button" class="btn btn-success" id="start" onClick="startGame();">Start</button>
+    </div>
+
+    <div id=questions>
+      <div id="clock">
+      </div>
+      <div class="container">
+        <div id="qText1">What is the top speed of a Mountain Lion?</div><br>
+        <div id="answers">
+          <input type="radio" name="answer1" value="50 MPH">50 MPH
+          <br>
+          <input type="radio" name="answer1" value="40 MPH">40 MPH
+          <br>
+          <input type="radio" name="answer1" value="30 MPH">30 MPH
+          <br>
+          <input type="radio" name="answer1" value="25 MPH">25 MPH
+        </div>
+        <br>
+      </div>
+      <br>
+      <div id="q2" class="container">
+        <div id="qText2">What is the average lifespan of a Mountain Lion in the wild?</div><br>
+        <div id="answers">
+          <input type="radio" name="answer2" value="15 Years">15 Years
+          <br>
+          <input type="radio" name="answer2" value="12 Years">12 Years
+          <br>
+          <input type="radio" name="answer2" value="23 Years">23 Years
+          <br>
+          <input type="radio" name="answer2" value="8 Years">8 Years
+        </div><br>
+      </div>
+      <br>
+      <div id="q3" class="container">
+        <div id="qText3">How many pounds of meat does an adult Mountain Lion require each day??</div><br>
+        <div id="answers">
+          <input type="radio" name="answer3" value="5 Lbs.">5 Lbs.
+          <br>
+          <input type="radio" name="answer3" value="7 Lbs.">7 Lbs.
+          <br>
+          <input type="radio" name="answer3" value="9 Lbs.">9 Lbs.
+          <br>
+          <input type="radio" name="answer3" value="15 Lbs.">15 Lbs.
+        </div>
+        <br>
+      </div>
+      <br>
+      <div id="q4" class="container">
+        <div id="qText4">Are Mountain Lions Dangerous?
+        </div><br>
+        <div id="answers">
+          <input type="radio" name="answer4" value="No">No
+          <br>
+          <input type="radio" name="answer4" value="A little bit">A little bit
+          <br>
+          <input type="radio" name="answer4" value="Yeah kinda">Yeah kinda
+          <br>
+          <input type="radio" name="answer4" value="HELL YEAH">HELL YEAH
+        </div>
+        <br>
+      </div>
+      <button type="button" class="btn btn-info" id="submit" onClick="gameOver();">Submit</button>
+    </div>
+
+    <div class=container-fluid id="endGame">
+      <div class="justify-content-center">
+        <div  id="gameOver">Game Over</div>
+      </div>
+      <div class="row justify-content-center">
+        <div id="info"></div>
+      </div>
+      <button type="button" class="btn btn-info" id="reset" onClick="setup();">Reset</button>
+    </div>
+    
+  </body>
+</html>
